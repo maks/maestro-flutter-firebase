@@ -21,4 +21,4 @@ onFlowComplete:
     env:
       email: ${output.testUser.email}
       password: ${output.testUser.password}
-- runFlow: subflows/select-dash.yaml
+- runFlow: subflows/sayhi-to-dash.yaml

@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
                     appBar: AppBar(
                       title: const Text('User Profile'),
                     ),
-                    avatar: CircleAvatar(child: Image.asset('dash.png')),
+                    avatar: CircleAvatar(child: Image.asset('assets/dash.png')),
                     actions: [
                       SignedOutAction((context) {
                         Navigator.of(context).pop();
@@ -46,21 +46,44 @@ class HomeScreen extends StatelessWidget {
         ],
         automaticallyImplyLeading: false,
       ),
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 500,
-              child: Image.asset('dash.png'),
-            ),
-            Text(
-              'Welcome!',
-              style: Theme.of(context).textTheme.displaySmall,
-            ),
-            const SignOutButton(),
-          ],
-        ),
+      body: const Center(
+        child: DashWelcomesYou(),
       ),
+    );
+  }
+}
+
+class DashWelcomesYou extends StatefulWidget {
+  const DashWelcomesYou({super.key});
+
+  @override
+  State<DashWelcomesYou> createState() => _DashWelcomesYouState();
+}
+
+class _DashWelcomesYouState extends State<DashWelcomesYou> {
+  final welcomeText = "Welcome !";
+  String dashSays = "";
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          height: 500,
+          child: Image.asset('assets/dash.png'),
+        ),
+        Text(
+          dashSays,
+          style: Theme.of(context).textTheme.displaySmall,
+        ),
+        MaterialButton(
+          child: const Text("Say hello to Dash..."),
+          onPressed: () => setState(() {
+            dashSays = welcomeText;
+          }),
+        ),
+        const SignOutButton(),
+      ],
     );
   }
 }
