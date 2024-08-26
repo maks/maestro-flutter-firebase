@@ -7,3 +7,5 @@ A simple demo of Firebase Auth using [code from the Flutter codelab](https://fir
 Firebase project config here is for a temporary Firebase project that is only available for a short period of time, if you use this code for your own work please make sure to change the configuration in [`lib/firebase_options.dart`](lib/firebase_options.dart). 
 
 Also note the configuration is only for building for android & ios.
+
+Note: Since this is just a demo, the android app is set to allow clear test HTTP to local firebase emuloator [per this answer](https://stackoverflow.com/a/62985709/85472).
