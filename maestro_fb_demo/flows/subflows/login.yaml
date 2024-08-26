@@ -1,0 +1,15 @@
+appId: com.example.firebaseauth101
+---
+- assertVisible: "Sign in"
+- tapOn: "Email"
+- inputText: ${email}
+- tapOn: "Password"
+- inputText: ${password}
+- tapOn: "Sign in"
+- runFlow:
+    label: Decline offer to save password to iOS keychain
+    when:
+      platform: iOS
+      visible: .+Keychain.+
+    commands:
+      - tapOn: ${notNow}

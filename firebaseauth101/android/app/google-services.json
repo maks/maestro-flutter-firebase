@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "762202793958",
+    "project_id": "maestro-sandbox-ab534",
+    "storage_bucket": "maestro-sandbox-ab534.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762202793958:android:fb971c6643af682ba51827",
+        "android_client_info": {
+          "package_name": "com.example.firebaseauth101"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuIlruUU_I4tcsrX8_xzEuGaGWgcsP-rY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

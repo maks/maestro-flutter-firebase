@@ -1,0 +1,6 @@
+# Generic Maestro configuration
+# See https://maestro.mobile.dev/api-reference/configuration/workspace-configuration
+flows:
+  - "flows/*"
+excludeTags:
+  - template

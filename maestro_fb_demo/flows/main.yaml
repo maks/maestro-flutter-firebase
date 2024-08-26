@@ -1,0 +1,24 @@
+appId: com.example.firebaseauth101
+name: basic main flow through demo app
+env:
+  testSetupApiUrl: http://127.0.0.1:5001/maestro-sandbox-ab534/us-central1
+onFlowStart:
+  - clearState
+  - launchApp
+  - runScript: ../js/test-setup-api.js
+  - runScript: ../js/create-test-user.js
+onFlowComplete:
+  - runScript: ../js/delete-test-user.js
+---
+- runFlow:
+    when:
+      visible: "Sign in
+
+        Welcome to FlutterFire, please sign in!
+
+        By signing in, you agree to our terms and conditions."
+    file: subflows/login.yaml
+    env:
+      email: ${output.testUser.email}
+      password: ${output.testUser.password}
+- runFlow: subflows/select-dash.yaml

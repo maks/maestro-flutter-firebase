@@ -1,0 +1,4 @@
+appId: com.example.firebaseauth101
+name: select Dash on main screen
+---
+- tapOn: "Fab"
