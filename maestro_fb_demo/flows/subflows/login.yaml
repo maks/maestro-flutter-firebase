@@ -5,7 +5,7 @@ appId: com.example.firebaseauth101
 - inputText: ${email}
 - tapOn: "Password"
 - inputText: ${password}
-- tapOn: "Sign in"
+- tapOn: "Log in"
 - runFlow:
     label: Decline offer to save password to iOS keychain
     when:
